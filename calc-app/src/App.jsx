@@ -1,4 +1,16 @@
-//importación
+//Import
+import React from 'react'
+import './App.css'
 
-//genereación
+// Generar
+const App = () => {
+  return (
+    <main className='container'>
+      <h2 className='hello'>Hello world</h2>
+    </main>
+  )
+}
 
+// exportación
+
+export { App }
