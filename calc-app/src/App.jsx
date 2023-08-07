@@ -1,12 +1,14 @@
 //Import
-import React from 'react'
+import React      from 'react'
+import { Result } from './components/Result'
 import './App.css'
 
 // Generar
 const App = () => {
+  console.log( 'render' )
   return (
     <main className='container'>
-      <h2 className='hello'>Hello world</h2>
+      <Result value={ 0 } />
     </main>
   )
 }
