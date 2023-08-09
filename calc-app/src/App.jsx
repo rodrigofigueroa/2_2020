@@ -8,7 +8,7 @@ const App = () => {
   console.log( 'render' )
   return (
     <main className='container'>
-      <Result value={ '10' } />
+      <Result/>
     </main>
   )
 }
