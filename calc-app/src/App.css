@@ -22,7 +22,7 @@ html,body{
 
 .container {
   width: 90%;
-  border-radius: 14px;
+  border-radius: 0px;
   overflow: hidden;
 }
 
@@ -33,4 +33,25 @@ html,body{
   text-align: end;
   color: #fff;
   font-size: 35px;
+}
+
+button {
+  width: 25%;
+  height: 50px;
+  outline: none;
+  border: 0;
+  background-color: #000;
+  font-size: 25px;
+  cursor: pointer;
+  transition: .6s all ease;
+  border: 1.5px solid transparent;
+}
+
+button._1 {
+  color:#F8DE22;
+}
+
+button:hover {
+  color: #4477CE;
+  border: 1.5px solid #4477CE
 }
