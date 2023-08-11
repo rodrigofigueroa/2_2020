@@ -1,7 +1,9 @@
 //Import
-import React      from 'react'
-import { Result } from './components/Result'
-import { Button } from './components/Button'
+import React              from 'react'
+import { Result }         from './components/Result'
+import { Button }         from './components/Button'
+import { MathOperations } from './components/MathOperations'
+import { ComFunctions }   from './components/ComFunctions'
 import './App.css'
 
 // Generar
@@ -10,10 +12,6 @@ const App = () => {
 
   const onHandlerClickfunction = text => {
     console.log( 'Text click', text )
-  }
-
-  const handlerClickOperation = operation  => {
-    console.log( 'Operations', operation )
   }
 
   return (
@@ -39,18 +37,13 @@ const App = () => {
           <div className='num'>
             <Button type={ '_1' } text={ '0' } handlerClick={ onHandlerClickfunction } />
           </div>
-          <div className='num_1'>
-            <Button type={ '_2' } text={ 'cle' } handlerClick={ handlerClickOperation } />
-            <Button type={ '_2' } text={ '<-' } handlerClick={ handlerClickOperation } />
-          </div>
+          <ComFunctions 
+            onClickClear={ compClear => console.log( 'ComClear', compClear )} 
+            onClickDelete={ compDelete => console.log( 'compDelete', compDelete ) } />
         </div>
-        <div className='operations'>
-          <Button type={ '_2' } text={ '-' } handlerClick={ handlerClickOperation } />
-          <Button type={ '_2' } text={ '+' } handlerClick={ handlerClickOperation } />
-          <Button type={ '_2' } text={ '/' } handlerClick={ handlerClickOperation } />
-          <Button type={ '_2' } text={ '*' } handlerClick={ handlerClickOperation } />
-          <Button type={ '_2' } text={ '=' } handlerClick={ handlerClickOperation } />
-        </div>
+        <MathOperations 
+        onClickOperation={ operation  => console.log( 'Operations', operation )} 
+        onClickEqual={ equal => console.log( 'Operations', equal ) } />
       </section>
     </main>
   )
