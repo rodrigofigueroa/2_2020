@@ -3,7 +3,7 @@ import React              from 'react'
 import { Result }         from './components/Result'
 import { Button }         from './components/Button'
 import { MathOperations } from './components/MathOperations'
-import { ComFunctions }   from './components/ComFunctions'
+import { Functions }   from './components/Functions'
 import './App.css'
 
 // Generar
@@ -37,13 +37,13 @@ const App = () => {
           <div className='num'>
             <Button type={ '_1' } text={ '0' } handlerClick={ onHandlerClickfunction } />
           </div>
-          <ComFunctions 
+          <Functions 
             onClickClear={ compClear => console.log( 'ComClear', compClear )} 
             onClickDelete={ compDelete => console.log( 'compDelete', compDelete ) } />
         </div>
         <MathOperations 
         onClickOperation={ operation  => console.log( 'Operations', operation )} 
-        onClickEqual={ equal => console.log( 'Operations', equal ) } />
+        onClickEqual={ equal => console.log( 'Equal', equal ) } />
       </section>
     </main>
   )

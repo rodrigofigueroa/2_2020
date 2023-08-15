@@ -1,0 +1,29 @@
+button {
+  width: 80px;
+  height: 50px;
+  outline: none;
+  border: 0;
+  background-color: #000;
+  font-size: 25px;
+  cursor: pointer;
+  transition: .6s all ease;
+  border: 1.5px solid transparent;
+}
+
+button._1 {
+  color:#F8DE22;
+}
+
+button._1:hover {
+  color: #4477CE;
+  border: 1.5px solid #4477CE
+}
+
+button._2 {
+  color: #900C3F;
+}
+
+button._2:hover {
+  color: #900C3F;
+  border: 1.5px solid #900C3F
+}
