@@ -1,6 +1,5 @@
 button {
-  width: 80px;
-  height: 50px;
+  width: 33.3%;
   outline: none;
   border: 0;
   background-color: #000;
@@ -8,6 +7,7 @@ button {
   cursor: pointer;
   transition: .6s all ease;
   border: 1.5px solid transparent;
+  padding: 16px;
 }
 
 button._1 {
@@ -21,9 +21,11 @@ button._1:hover {
 
 button._2 {
   color: #900C3F;
+  width: 100%;
 }
 
 button._2:hover {
   color: #900C3F;
-  border: 1.5px solid #900C3F
+  border: 1.5px solid #900C3F;
+  
 }
