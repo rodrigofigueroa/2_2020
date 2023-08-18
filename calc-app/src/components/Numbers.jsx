@@ -7,9 +7,14 @@ const Numbers = ({ onClickNumber }) => {
   const numbers = [1, 2, 3, 4, 5, 6 ,7 , 8, 9, 0]
   // DRY Dont repeat yourself
   
-  const iterateButtton = num => {
-    return <Button type={ '_1' } text={ `${ num }` } handlerClick={ onClickNumber } />
-  }
+  const iterateButtton = num => (
+    <Button 
+      key={ num } 
+      type={ '_1' } 
+      text={ `${ num }` } 
+      handlerClick={ onClickNumber } 
+    />
+  )
 
   return (
       <section className='num'>
