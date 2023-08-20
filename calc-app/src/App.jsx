@@ -9,21 +9,22 @@ import './App.css'
 // Generar
 const App = () => {
   console.log( 'render' )
-
-  const arrayValueFunction = useState( '' )
+  // state of the application using Usestate
+  // destructuring
+  const [ stack, setStack ] = useState( '' )
   // Texto
-  const texto = arrayValueFunction[ 0 ]
+  // const texto = arrayValueFunction[ 0 ]
   // Funcion para modificar el texto
-  const functionTexto = arrayValueFunction[ 1 ]
+  // const functionTexto = arrayValueFunction[ 1 ]
 
   return (
     <main className='container'>
-      <Result value={ texto }/>
+      <Result value={ stack }/>
       <section className='calc'>        
           <Numbers onClickNumber={
             numberText => {
               console.log( 'numberText', numberText )
-              functionTexto( numberText )
+              setStack( numberText )
             }
           }/>
         <MathOperations 
