@@ -24,15 +24,30 @@ const App = () => {
           <Numbers onClickNumber={
             numberText => {
               console.log( 'numberText', numberText )
-              setStack( numberText )
+              setStack( `${ stack }${ numberText }` )
             }
           }/>
         <MathOperations 
-        onClickOperation={ operation  => console.log( 'Operations', operation )} 
-        onClickEqual={ equal => console.log( 'Equal', equal ) } />
+        onClickOperation={ operation  => {
+          console.log( 'Operations', operation )
+          setStack( `${ stack }${ operation }`)
+        }}
+        onClickEqual={ equal => {
+          console.log( 'Equal', equal )
+          setStack( `${ stack }${ equal }` )
+          }} />
         <Functions 
-            onClickClear={ compClear => console.log( 'ComClear', compClear )} 
-            onClickDelete={ compDelete => console.log( 'compDelete', compDelete ) } />
+            onClickClear={ compClear => {
+              console.log( 'ComClear', compClear )
+              setStack( '' )
+            }} 
+            onClickDelete={ compDelete => {
+              console.log( 'compDelete', compDelete ) 
+              console.log( stack.length, stack.slice( 0, 2 - 1 ))
+              // slice 
+              // substring 
+              setStack( stack.slice( 0, stack.length -1  ) )
+            }} />
       </section>
     </main>
   )
