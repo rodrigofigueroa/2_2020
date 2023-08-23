@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 //Import
 import React, { useState }  from 'react'
 import { Result }           from './components/Result'
@@ -34,7 +35,7 @@ const App = () => {
         }}
         onClickEqual={ equal => {
           console.log( 'Equal', equal )
-          setStack( `${ stack }${ equal }` )
+          setStack( eval( stack ).toString() )
           }} />
         <Functions 
             onClickClear={ compClear => {
@@ -42,11 +43,14 @@ const App = () => {
               setStack( '' )
             }} 
             onClickDelete={ compDelete => {
-              console.log( 'compDelete', compDelete ) 
-              console.log( stack.length, stack.slice( 0, 2 - 1 ))
+              let stackLength = stack.length
+              // console.log( stack.length, stack.slice( 0, 2 - 1 ))
               // slice 
               // substring 
-              setStack( stack.slice( 0, stack.length -1  ) )
+              if( stackLength > 0 ) {
+                console.log( 'compDelete', compDelete ) 
+                setStack( stack.slice( 0, stack.length -1  ) )
+              }
             }} />
       </section>
     </main>
