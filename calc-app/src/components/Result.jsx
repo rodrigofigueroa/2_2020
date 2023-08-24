@@ -1,7 +1,7 @@
 import React      from 'react'
 import PropTypes  from 'prop-types'
 
-const Result = ({ value = '9' }) => (
+const Result = ({ value = '0' }) => (
     <div className="result">
       <span>
         { value }
@@ -14,7 +14,7 @@ Result.propTypes = {
 }
 
 Result.defaultProps = {
-  value: '10'
+  value: '0'
 }
 
 export { Result }

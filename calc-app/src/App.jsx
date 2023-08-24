@@ -1,6 +1,7 @@
 /* eslint no-eval: 0 */
 //Import
 import React, { useState }  from 'react'
+import words                from 'lodash.words'
 import { Result }           from './components/Result'
 import { MathOperations }   from './components/MathOperations'
 import { Functions }        from './components/Functions'
@@ -17,10 +18,23 @@ const App = () => {
   // const texto = arrayValueFunction[ 0 ]
   // Funcion para modificar el texto
   // const functionTexto = arrayValueFunction[ 1 ]
+  const regex   = /[^-^+^*^/]+/g
+  const regex2  = new RegExp( '[0-9]+','g')
+  // const regex3  = new RegExp( '[\\d]+','g')
+  
+  const items = words( stack, regex )
+  const itemsMatch = stack.match( regex2 )
+  
+  console.log('Render Stack items', items )
+  console.log('Render Stack itemsMatch', itemsMatch )
 
+  const value = items.length > 0 ? items[ items.length -1 ] : '0'
+
+  const value2 = itemsMatch !== null ? itemsMatch[ itemsMatch.length -1 ] : '0'
+  
   return (
     <main className='container'>
-      <Result value={ stack }/>
+      <Result value={ value2 }/>
       <section className='calc'>        
           <Numbers onClickNumber={
             numberText => {
