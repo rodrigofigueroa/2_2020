@@ -1,6 +1,7 @@
 {
   "name": "calc-app",
   "version": "0.1.0",
+  "homepage": "https://rodrigofigueroa.github.io/2_2020",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -44,6 +45,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0"
-  },
-  "homepage": "https://rodrigofigueroa.github.io/2_2020/calculator"
+  }
 }
